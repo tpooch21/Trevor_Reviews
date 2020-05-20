@@ -17,7 +17,7 @@
 ```
 
 ### Create review
-  * POST `places/:place_id/reviews`
+  * POST `api/:place_id/reviews`
 
 **Path Parameters**
   * `place_id` place id
@@ -42,7 +42,7 @@
 ```
 
 ### Update review
-  * PATCH `places/:place_id/reviews/:review_id`
+  * PATCH `api/:place_id/reviews/:review_id`
 
 **Path Parameters**
   * `place_id` place id
@@ -67,7 +67,7 @@
 ```
 
 ### Delete review
-  * DELETE `places/:place_id/reviews/:review_id`
+  * DELETE `api/:place_id/reviews/:review_id`
 
 **Path Parameters**
 * `place_id` place id
