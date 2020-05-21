@@ -8,7 +8,25 @@
 
 **Success Status Code:** `200`
 
-**Returns:** JSON
+**Individual Review Object:**
+
+```json
+  {
+    "first_name": "String",
+    "last_name": "String",
+    "avatar": "String",
+    "date_published": "String",
+    "comment": "String",
+    "checkin_rating": "Number",
+    "accuracy_rating": "Number",
+    "value_rating": "Number",
+    "communication_rating": "Number",
+    "cleanliness_rating": "Number",
+    "location_rating": "Number"
+  }
+```
+
+**Returns:** JSON, each object in 'reviews' array contains the above properties
 
 ```json
     {
