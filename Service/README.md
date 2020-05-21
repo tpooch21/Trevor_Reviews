@@ -1,10 +1,10 @@
 ## Server API
 
 ### Get reviews for a place
-  * GET `/api/:place_id/reviews`
+  * GET `/api/place/:id/reviews`
 
 **Path Parameters**
-  * `place_id`  place id
+  * `id`  place id
 
 **Success Status Code:** `200`
 
@@ -17,10 +17,10 @@
 ```
 
 ### Create review
-  * POST `api/:place_id/reviews`
+  * POST `api/place/:id/review`
 
 **Path Parameters**
-  * `place_id` place id
+  * `id` place id
 
 **Success Status Code:** `201`
 
@@ -30,6 +30,7 @@
     {
       "first_name": "String",
       "last_name": "String",
+      "avatar": "String",
       "date": "String",
       "comment": "String",
       "checkin_rating": "Number",
@@ -42,7 +43,7 @@
 ```
 
 ### Update review
-  * PATCH `api/:place_id/reviews/:review_id`
+  * PATCH `api/:place_id/review/:review_id`
 
 **Path Parameters**
   * `place_id` place id
@@ -55,6 +56,7 @@
     {
       "first_name": "String",
       "last_name": "String",
+      "avatar": "String",
       "date": "String",
       "comment": "String",
       "checkin_rating": "Number",
@@ -67,10 +69,18 @@
 ```
 
 ### Delete review
-  * DELETE `api/:place_id/reviews/:review_id`
+  * DELETE `api/:place_id/review/:review_id`
 
 **Path Parameters**
-* `place_id` place id
-* `review_id` review id
+  * `place_id` place id
+  * `review_id` review id
+
+**Success Status Code:** `204`
+
+### Delete place
+  * DELETE `api/place/:id`
+
+**Path Parameters**
+  * `id` place id
 
 **Success Status Code:** `204`
