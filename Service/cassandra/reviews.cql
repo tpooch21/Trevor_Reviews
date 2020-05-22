@@ -1,3 +1,5 @@
+DROP KEYSPACE IF EXISTS review;
+
 CREATE KEYSPACE review WITH replication =
   {'class': 'SimpleStrategy', 'replication_factor': 1};
 
@@ -51,4 +53,4 @@ CREATE TABLE review.reviews_by_place (
 ) WITH CLUSTERING ORDER BY (date_posted DESC);
 
 
-
+-- Might need to make these uuids integers instead

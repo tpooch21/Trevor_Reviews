@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "cassandra-driver": "^4.5.2",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.6",
     "faker": "^4.1.0",
@@ -40,6 +41,7 @@
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "cassandra-client": "^0.15.2",
     "compression-webpack-plugin": "^4.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
