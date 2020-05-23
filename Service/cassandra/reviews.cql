@@ -7,14 +7,14 @@ USE review;
 
 -- Find place by id
 CREATE TABLE review.place (
-  place_id uuid,
+  place_id bigint,
   place_name text,
   PRIMARY KEY (place_id)
 );
 
 -- Find user by id
 CREATE TABLE review.users (
-  user_id uuid,
+  user_id bigint,
   first_name text,
   last_name text,
   avatar text,
@@ -23,9 +23,9 @@ CREATE TABLE review.users (
 
  -- Find review by id
 CREATE TABLE review.reviews (
-  review_id uuid,
+  review_id bigint,
   date_posted date,
-  user_id uuid,
+  user_id bigint,
   comment text,
   checkin_rating decimal,
   accuracy_rating decimal,
@@ -38,10 +38,10 @@ CREATE TABLE review.reviews (
 
 -- Find reviews by place id
 CREATE TABLE review.reviews_by_place (
-  place_id uuid,
-  review_id uuid,
+  place_id bigint,
+  review_id bigint,
   date_posted date,
-  user_id uuid,
+  user_id bigint,
   comment text,
   checkin_rating decimal,
   accuracy_rating decimal,
@@ -53,4 +53,3 @@ CREATE TABLE review.reviews_by_place (
 ) WITH CLUSTERING ORDER BY (date_posted DESC);
 
 
--- Might need to make these uuids integers instead
