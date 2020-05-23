@@ -1,39 +1,104 @@
-# Project Name
+## Server API
 
-> Project description
+### Get reviews for a place
+  * GET `/api/place/:id/reviews`
 
-## Related Projects
+**Path Parameters**
+  * `id`  place id
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+**Success Status Code:** `200`
 
-## Table of Contents
+**Individual Review Object:**
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
+```json
+  {
+    "first_name": "String",
+    "last_name": "String",
+    "avatar": "String",
+    "date_published": "String",
+    "comment": "String",
+    "checkin_rating": "Number",
+    "accuracy_rating": "Number",
+    "value_rating": "Number",
+    "communication_rating": "Number",
+    "cleanliness_rating": "Number",
+    "location_rating": "Number"
+  }
 ```
 
+**Returns:** JSON, each object in 'reviews' array contains the above properties
+
+```json
+    {
+      "reviews": "Array"
+    }
+```
+
+### Create review
+  * POST `api/place/:id/review`
+
+**Path Parameters**
+  * `id` place id
+
+**Success Status Code:** `201`
+
+**Request Body:** Expects JSON with the following keys:
+
+```json
+    {
+      "first_name": "String",
+      "last_name": "String",
+      "avatar": "String",
+      "date": "String",
+      "comment": "String",
+      "checkin_rating": "Number",
+      "accuracy_rating": "Number",
+      "value_rating": "Number",
+      "communication_rating": "Number",
+      "cleanliness_rating": "Number",
+      "location_rating": "Number"
+    }
+```
+
+### Update review
+  * PATCH `api/:place_id/review/:review_id`
+
+**Path Parameters**
+  * `place_id` place id
+  * `review_id` review id
+
+**Success Status Code:** `204`
+
+**Request Body:** Expects JSON with any of the following keys (include only keys to be updated):
+```json
+    {
+      "first_name": "String",
+      "last_name": "String",
+      "avatar": "String",
+      "date": "String",
+      "comment": "String",
+      "checkin_rating": "Number",
+      "accuracy_rating": "Number",
+      "value_rating": "Number",
+      "communication_rating": "Number",
+      "cleanliness_rating": "Number",
+      "location_rating": "Number"
+    }
+```
+
+### Delete review
+  * DELETE `api/:place_id/review/:review_id`
+
+**Path Parameters**
+  * `place_id` place id
+  * `review_id` review id
+
+**Success Status Code:** `204`
+
+### Delete place
+  * DELETE `api/place/:id`
+
+**Path Parameters**
+  * `id` place id
+
+**Success Status Code:** `204`
