@@ -27,6 +27,6 @@
     communication_rating DECIMAL NOT NULL,
     cleanliness_rating DECIMAL NOT NULL,
     location_rating DECIMAL NOT NULL,
-    place_id INT(11) REFERENCES places(place_id),
     user_id INT(11) REFERENCES users(user_id)
+    place_id INT(11) REFERENCES places(place_id),
   );
