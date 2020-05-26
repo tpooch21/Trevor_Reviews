@@ -1,13 +1,15 @@
-  SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'reviews';
+  SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname = 'bnbreviews';
 
-  DROP DATABASE IF EXISTS reviews;
+  \c test;
 
-  CREATE DATABASE reviews;
-  \c reviews;
+  DROP DATABASE bnbreviews;
+
+  CREATE DATABASE bnbreviews;
+  \c bnbreviews;
 
   CREATE TABLE places (
     place_id SERIAL PRIMARY KEY,
-    place_name INT NOT NULL
+    place_name VARCHAR(100) NOT NULL
   );
 
   CREATE TABLE users (
@@ -27,6 +29,10 @@
     communication_rating DECIMAL NOT NULL,
     cleanliness_rating DECIMAL NOT NULL,
     location_rating DECIMAL NOT NULL,
-    user_id INT(11) REFERENCES users(user_id)
-    place_id INT(11) REFERENCES places(place_id),
+    user_id INT NOT NULL,
+    place_id INT NOT NULL
   );
+
+
+    -- FOREIGN KEY (user_id) REFERENCES users(user_id),
+    -- FOREIGN KEY (place_id) REFERENCES places(place_id)
