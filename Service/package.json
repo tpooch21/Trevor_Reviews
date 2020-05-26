@@ -8,10 +8,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "sleep 20 && node ./server/index.js",
+    "startLegacyServer": "sleep 20 && node ./server/index.js",
+    "start": "nodemon Trevor_Server/index.js",
     "lint": "eslint .",
     "react-dev": "webpack -d --watch",
-    "server": "nodemon ./server/index.js",
     "generate-data": "node ./server/database/dataGenerator.js",
     "legacyseed": "psql -U postgres < schema.sql",
     "test": "jest --coverage",

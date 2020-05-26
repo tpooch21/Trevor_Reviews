@@ -21,12 +21,12 @@
 
   CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
-    date_published DATE NOT NULL,
+    date_published TEXT NOT NULL,
     comment TEXT NOT NULL,
     checkin_rating DECIMAL NOT NULL,
     accuracy_rating DECIMAL NOT NULL,
     value_rating DECIMAL NOT NULL,
-    communication_rating DECIMAL NOT NULL,
+    communication_rating DECIMAL NOT NULL,5
     cleanliness_rating DECIMAL NOT NULL,
     location_rating DECIMAL NOT NULL,
     user_id INT NOT NULL,

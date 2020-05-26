@@ -8,109 +8,109 @@ const fs = require('fs');
 
 console.log(new Date());
 
-const writePlaces = fs.createWriteStream('places.csv');
-writePlaces.write('place_id,place_name');
+// const writePlaces = fs.createWriteStream('places.csv');
+// writePlaces.write('place_id,place_name');
 
-const userWriter = csvWriter();
+// const userWriter = csvWriter();
 
 // Various review writers to distribute reviews across different files
-// const writeReviews = fs.createWriteStream('reviews.csv');
-// writeReviews.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews = fs.createWriteStream('reviews.csv');
+writeReviews.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews2 = fs.createWriteStream('reviews2.csv');
-// writeReviews2.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews2 = fs.createWriteStream('reviews2.csv');
+writeReviews2.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews3 = fs.createWriteStream('reviews3.csv');
-// writeReviews3.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews3 = fs.createWriteStream('reviews3.csv');
+writeReviews3.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews4 = fs.createWriteStream('reviews4.csv');
-// writeReviews4.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews4 = fs.createWriteStream('reviews4.csv');
+writeReviews4.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews5 = fs.createWriteStream('reviews5.csv');
-// writeReviews5.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews5 = fs.createWriteStream('reviews5.csv');
+writeReviews5.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews6 = fs.createWriteStream('reviews6.csv');
-// writeReviews6.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews6 = fs.createWriteStream('reviews6.csv');
+writeReviews6.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews7 = fs.createWriteStream('reviews7.csv');
-// writeReviews7.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews7 = fs.createWriteStream('reviews7.csv');
+writeReviews7.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews8 = fs.createWriteStream('reviews8.csv');
-// writeReviews8.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews8 = fs.createWriteStream('reviews8.csv');
+writeReviews8.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews9 = fs.createWriteStream('reviews9.csv');
-// writeReviews9.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews9 = fs.createWriteStream('reviews9.csv');
+writeReviews9.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const writeReviews10 = fs.createWriteStream('reviews10.csv');
-// writeReviews10.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
+const writeReviews10 = fs.createWriteStream('reviews10.csv');
+writeReviews10.write('review_id,date_published,comment,checkin_rating,accuracy_rating,value_rating,communication_rating,cleanliness_rating,location_rating,user_id,place_id\n');
 
-// const reviewWriters = [writeReviews, writeReviews2, writeReviews3, writeReviews4, writeReviews5, writeReviews6, writeReviews7, writeReviews8, writeReviews9, writeReviews10];
+const reviewWriters = [writeReviews, writeReviews2, writeReviews3, writeReviews4, writeReviews5, writeReviews6, writeReviews7, writeReviews8, writeReviews9, writeReviews10];
 
 
-const placeType = ['House', 'Apartment', 'Getaway', 'Hideout', 'Mansion', 'Studio', 'Paradise', 'Flat', 'Terrace', 'Place', 'Hotspot', 'Condo', 'Townhouse', 'Cabin', 'Loft', 'Home', 'Beach House', 'Shack', 'Loveshack', 'Warehouse', 'Penthouse', 'Suite', 'Room', 'Casa', 'Cottage', 'Pad', 'Spa', 'Bungalow', 'Space', 'Spot', 'Icon', 'Villa', 'Dojo', 'Nest', 'Treehouse', 'Escape', 'Property', 'Home', 'Hideaway', 'Oasis', 'Retreat', 'Lounge', 'Lodge', 'Beehive', 'Igloo', 'Runaway', 'Birdhouse', 'Beachfront', 'Temple', 'Garden', 'Habitat', 'Haven'];
+// const placeType = ['House', 'Apartment', 'Getaway', 'Hideout', 'Mansion', 'Studio', 'Paradise', 'Flat', 'Terrace', 'Place', 'Hotspot', 'Condo', 'Townhouse', 'Cabin', 'Loft', 'Home', 'Beach House', 'Shack', 'Loveshack', 'Warehouse', 'Penthouse', 'Suite', 'Room', 'Casa', 'Cottage', 'Pad', 'Spa', 'Bungalow', 'Space', 'Spot', 'Icon', 'Villa', 'Dojo', 'Nest', 'Treehouse', 'Escape', 'Property', 'Home', 'Hideaway', 'Oasis', 'Retreat', 'Lounge', 'Lodge', 'Beehive', 'Igloo', 'Runaway', 'Birdhouse', 'Beachfront', 'Temple', 'Garden', 'Habitat', 'Haven'];
 
-var city_names = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown"];
+// var city_names = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown"];
 
-const userAvatar = 'http://loremflickr.com/56/56/people';
+// const userAvatar = 'http://loremflickr.com/56/56/people';
 
 // Iterate from 1 to 10,000,000
 // Counter starts at 0, to pick a placeType
 // Increments each time
 // Generate name using faker.city + placeType
 
-// Generate 10M primary records (places)
-const generatePlace = (writer, encoding, callback) => {
-  // let data = [];
-  // placeWriter.pipe(fs.createWriteStream('places.csv'));
-  let placeIndex = 0;
-  let i = 10000000;
-  let id = 0;
-  let cityIndex = 0;
+// // Generate 10M primary records (places)
+// const generatePlace = (writer, encoding, callback) => {
+//   // let data = [];
+//   // placeWriter.pipe(fs.createWriteStream('places.csv'));
+//   let placeIndex = 0;
+//   let i = 10000000;
+//   let id = 0;
+//   let cityIndex = 0;
 
-  function writeFile() {
-    let ok = true;
-    do {
-      i -= 1;
-      id++;
-      const placeName = `${city_names[cityIndex]} ${placeType[placeIndex]}`;
-      const data = `${id},${placeName}\n`;
-      // Increase placeIndex, reset when end of places array is reached
-      placeIndex++;
-      placeIndex = placeIndex === placeType.length ? 0 : placeIndex;
+//   function writeFile() {
+//     let ok = true;
+//     do {
+//       i -= 1;
+//       id++;
+//       const placeName = `${city_names[cityIndex]} ${placeType[placeIndex]}`;
+//       const data = `${id},${placeName}\n`;
+//       // Increase placeIndex, reset when end of places array is reached
+//       placeIndex++;
+//       placeIndex = placeIndex === placeType.length ? 0 : placeIndex;
 
-      // Increase cityIndex, reset when end of cities array is reached
-      cityIndex++;
-      cityIndex = cityIndex === city_names.length ? 0 : cityIndex;
+//       // Increase cityIndex, reset when end of cities array is reached
+//       cityIndex++;
+//       cityIndex = cityIndex === city_names.length ? 0 : cityIndex;
 
-      // When last item is reached, write to csv and call callback to end write process
-      if (i === 0) {
-        writer.write(data, encoding, callback);
-      } else {
-        ok = writer.write(data, encoding);
-      }
-    } while (i > 0 && ok);
-    // had to stop early
-    writer.once('drain', writeFile);
-  }
+//       // When last item is reached, write to csv and call callback to end write process
+//       if (i === 0) {
+//         writer.write(data, encoding, callback);
+//       } else {
+//         ok = writer.write(data, encoding);
+//       }
+//     } while (i > 0 && ok);
+//     // had to stop early
+//     writer.once('drain', writeFile);
+//   }
 
-  writeFile();
-  // for (var i = 0; i < 10000000; i++) {
-  //   placeWriter.write({place_id: i + 1, place_name: `${faker.address.city()} ${placeType[counter]}`});
-  //   counter++;
-  //   if (counter === placeType.length) {
-  //     counter = 0;
-  //   }
-  // };
+//   writeFile();
+//   // for (var i = 0; i < 10000000; i++) {
+//   //   placeWriter.write({place_id: i + 1, place_name: `${faker.address.city()} ${placeType[counter]}`});
+//   //   counter++;
+//   //   if (counter === placeType.length) {
+//   //     counter = 0;
+//   //   }
+//   // };
 
-  // placeWriter.end();
-  // console.log('Places written to CSV successfully');
-  // return data;
-};
+//   // placeWriter.end();
+//   // console.log('Places written to CSV successfully');
+//   // return data;
+// };
 
-generatePlace(writePlaces, 'utf-8', () => {
-  writePlaces.end();
-  console.log('Places written successfully');
-});
+// generatePlace(writePlaces, 'utf-8', () => {
+//   writePlaces.end();
+//   console.log('Places written successfully');
+// });
 
 // // Generate 100k random users
 // const generateUser = () => {
@@ -334,81 +334,81 @@ const reviewComments = [ 'Quam consequatur ullam veniam aut deserunt itaque enim
 'Voluptatem non ea et.',
 'Nisi mollitia quas id quo molestias et.'];
 
-// const generateReviews = (writer, encoding, callback) => {
-//   // const reviewFiles = ['reviews.csv', 'reviews2.csv', 'reviews3.csv', 'reviews4.csv', 'reviews5.csv'];
+const generateReviews = (writer, encoding, callback) => {
+  // const reviewFiles = ['reviews.csv', 'reviews2.csv', 'reviews3.csv', 'reviews4.csv', 'reviews5.csv'];
 
-//   let i = 100000;
-//   let id = 0;
-//   let counter = 2;
-//   let ratingIndex = 0;
-//   let yearIndex = 0;
-//   let monthIndex = 0;
-//   let commentIndex = 0;
-//   let userID = 1;
-//   let writerIndex = 0;
+  let i = 200000;
+  let id = 0;
+  let counter = 2;
+  let ratingIndex = 0;
+  let yearIndex = 0;
+  let monthIndex = 0;
+  let commentIndex = 0;
+  let userID = 1;
+  let writerIndex = 0;
 
-//   function write() {
-//     let ok = true;
+  function write() {
+    let ok = true;
 
-//     do {
-//       i--;
-//       if ((i + 1) % 10000 === 0) {
-//         writer = reviewWriters[writerIndex];
-//         writerIndex++;
-//       }
-//       for (var j = 0; j < counter; j++) {
-//         id++;
-//         const reviewId = id;
-//         const datePublished = `${months[monthIndex]} ${years[yearIndex]}`;
-//         const comment = reviewComments[commentIndex];
-//         const checkinRating = ratings[ratingIndex];
-//         const accuracyRating = ratings[ratingIndex + 1];
-//         const valueRating = ratings[ratingIndex + 2];
-//         const communicationRating = ratings[ratingIndex + 3];
-//         const cleanlinessRating = ratings[ratingIndex + 4];
-//         const locationRating = ratings[ratingIndex + 5];
-//         const userId = userID;
-//         const placeId = i + 1;
+    do {
+      i--;
+      if ((i + 1) % 20000 === 0) {
+        writer = reviewWriters[writerIndex];
+        writerIndex++;
+      }
+      for (var j = 0; j < counter; j++) {
+        id++;
+        const reviewId = id;
+        const datePublished = `${months[monthIndex]} ${years[yearIndex]}`;
+        const comment = reviewComments[commentIndex];
+        const checkinRating = ratings[ratingIndex];
+        const accuracyRating = ratings[ratingIndex + 1];
+        const valueRating = ratings[ratingIndex + 2];
+        const communicationRating = ratings[ratingIndex + 3];
+        const cleanlinessRating = ratings[ratingIndex + 4];
+        const locationRating = ratings[ratingIndex + 5];
+        const userId = userID;
+        const placeId = i + 1;
 
-//         const data = `${reviewId},${datePublished},${comment},${checkinRating},${accuracyRating},${valueRating},${communicationRating},${cleanlinessRating},${locationRating},${userId},${placeId}\n`;
-//         if (i === 0 && j === counter - 1) {
-//           writer.write(data, encoding, callback);
-//         } else {
-//           ok = writer.write(data, encoding);
+        const data = `${reviewId},${datePublished},${comment},${checkinRating},${accuracyRating},${valueRating},${communicationRating},${cleanlinessRating},${locationRating},${userId},${placeId}\n`;
+        if (i === 0 && j === counter - 1) {
+          writer.write(data, encoding, callback);
+        } else {
+          ok = writer.write(data, encoding);
 
-//           yearIndex++;
-//           yearIndex = yearIndex === years.length ? 0 : yearIndex;
+          yearIndex++;
+          yearIndex = yearIndex === years.length ? 0 : yearIndex;
 
-//           ratingIndex += 6;
-//           ratingIndex = ratingIndex === ratings.length ? 0 : ratingIndex;
+          ratingIndex += 6;
+          ratingIndex = ratingIndex === ratings.length ? 0 : ratingIndex;
 
-//           commentIndex++;
-//           commentIndex = commentIndex === reviewComments.length ? 0 : commentIndex;
+          commentIndex++;
+          commentIndex = commentIndex === reviewComments.length ? 0 : commentIndex;
 
-//           userID++;
-//           userID = userID === 100001 ? 1 : userID;
-//         }
-//       }
+          userID++;
+          userID = userID === 100001 ? 1 : userID;
+        }
+      }
 
-//       // When reviews have been created for a place, increase the number of reviews to be created for the next place until we reach 500 reviews (max for a place)
-//       counter++;
-//       counter = counter === 501 ? 2 : counter;
+      // When reviews have been created for a place, increase the number of reviews to be created for the next place until we reach 500 reviews (max for a place)
+      counter++;
+      counter = counter === 501 ? 2 : counter;
 
-//     } while (i > 0 && ok);
-//     if (i > 0) {
-//       // had to stop early
-//       writer.once('drain', write);
-//     }
+    } while (i > 0 && ok);
+    if (i > 0) {
+      // had to stop early
+      writer.once('drain', write);
+    }
 
-//   }
+  }
 
-//   write();
-// };
+  write();
+};
 
-// generateReviews(writeReviews, 'utf-8', () => {
-//   writeReviews5.end();
-//   console.log('Reviews inserted to csv');
-// });
+generateReviews(writeReviews, 'utf-8', () => {
+  writeReviews10.end();
+  console.log('Reviews inserted to csv');
+});
 
 
 
