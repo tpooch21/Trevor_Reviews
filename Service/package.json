@@ -8,15 +8,16 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "sleep 20 && node ./server/index.js",
+    "startLegacyServer": "sleep 20 && node ./server/index.js",
+    "start": "nodemon Trevor_Server/index.js",
     "lint": "eslint .",
     "react-dev": "webpack -d --watch",
-    "server": "nodemon ./server/index.js",
     "generate-data": "node ./server/database/dataGenerator.js",
-    "seed": "psql -U postgres < schema.sql",
+    "legacyseed": "psql -U postgres < schema.sql",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "run:seeder": "node --max-old-space-size=16000 seeder.js && node timeStamp.js"
+    "trevorDataGen": "node --max-old-space-size=16000 seeder.js && node timeStamp.js",
+    "seed": "psql -U trevor -d bnbreviews < Trevor_Database/schema2.sql && bash seedingCommands.bash"
   },
   "dependencies": {
     "axios": "^0.19.2",
