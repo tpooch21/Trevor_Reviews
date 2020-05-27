@@ -1,19 +1,19 @@
-DROP KEYSPACE IF EXISTS review;
+DROP KEYSPACE IF EXISTS bnbreviews;
 
-CREATE KEYSPACE review WITH replication =
+CREATE KEYSPACE bnbreviews WITH replication =
   {'class': 'SimpleStrategy', 'replication_factor': 1};
 
-USE review;
+USE bnbreviews;
 
 -- Find place by id
-CREATE TABLE review.place (
+CREATE TABLE bnbreviews.places (
   place_id bigint,
   place_name text,
   PRIMARY KEY (place_id)
 );
 
 -- Find user by id
-CREATE TABLE review.users (
+CREATE TABLE bnbreviews.users (
   user_id bigint,
   first_name text,
   last_name text,
@@ -22,7 +22,7 @@ CREATE TABLE review.users (
 );
 
  -- Find review by id
-CREATE TABLE review.reviews (
+CREATE TABLE bnbreviews.reviews (
   review_id bigint,
   date_published date,
   comment text,
@@ -37,7 +37,7 @@ CREATE TABLE review.reviews (
 );
 
 -- Find reviews by place id
-CREATE TABLE review.reviews_by_place (
+CREATE TABLE bnbreviews.reviews_by_place (
   review_id bigint,
   date_published date,
   comment text,

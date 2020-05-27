@@ -26,7 +26,7 @@
     checkin_rating DECIMAL NOT NULL,
     accuracy_rating DECIMAL NOT NULL,
     value_rating DECIMAL NOT NULL,
-    communication_rating DECIMAL NOT NULL,5
+    communication_rating DECIMAL NOT NULL,
     cleanliness_rating DECIMAL NOT NULL,
     location_rating DECIMAL NOT NULL,
     user_id INT NOT NULL,
