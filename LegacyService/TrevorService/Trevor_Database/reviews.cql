@@ -21,8 +21,7 @@ CREATE TABLE bnbreviews.users (
   PRIMARY KEY(user_id)
 );
 
- -- Find review by id
-CREATE TABLE bnbreviews.reviews (
+CREATE TABLE bnbreviews.reviews_by_user (
   review_id bigint,
   date_published date,
   comment text,
@@ -37,7 +36,7 @@ CREATE TABLE bnbreviews.reviews (
   first_name text,
   last_name text,
   avatar text,
-  PRIMARY KEY (review_id, date_published)
+  PRIMARY KEY (user_id, date_published, review_id)
 ) WITH CLUSTERING ORDER BY (date_published DESC);
 
 -- Find reviews by place id
@@ -56,7 +55,7 @@ CREATE TABLE bnbreviews.reviews_by_place (
   first_name text,
   last_name text,
   avatar text,
-  PRIMARY KEY (place_id, date_published)
+  PRIMARY KEY (place_id, date_published, review_id)
 ) WITH CLUSTERING ORDER BY (date_published DESC);
 
 
