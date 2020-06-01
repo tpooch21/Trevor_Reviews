@@ -1,0 +1,11 @@
+node_modules
+
+coverage/
+
+TrevorService/Trevor_Database/cassReviews/
+
+logs/
+
+TrevorService/Trevor_Database/places.csv
+
+TrevorService/Trevor_Database/users.csv
