@@ -46,6 +46,7 @@ class App extends React.Component {
   }
 
   getAllReviews() {
+    console.log('We here');
     axios.get('/rooms/2/reviews')
       .then(({ data }) => {
         console.log(data);

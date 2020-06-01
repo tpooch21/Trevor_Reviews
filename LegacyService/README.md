@@ -49,7 +49,7 @@
       "first_name": "String",
       "last_name": "String",
       "avatar": "String",
-      "date": "String",
+      "date_published": "String",
       "comment": "String",
       "checkin_rating": "Number",
       "accuracy_rating": "Number",

@@ -2,8 +2,10 @@ node_modules
 
 coverage/
 
-pgReviews/
-
-cassReviews/
+TrevorService/Trevor_Database/cassReviews/
 
 logs/
+
+TrevorService/Trevor_Database/places.csv
+
+TrevorService/Trevor_Database/users.csv

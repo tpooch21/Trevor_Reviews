@@ -9,7 +9,7 @@
   },
   "scripts": {
     "startLegacyServer": "sleep 20 && node ./server/index.js",
-    "start": "nodemon Trevor_Server/index.js",
+    "start": "nodemon TrevorService/Trevor_Server/index.js",
     "lint": "eslint .",
     "react-dev": "webpack -d --watch",
     "generate-data": "node ./server/database/dataGenerator.js",
@@ -31,6 +31,8 @@
     "express-static-gzip": "^2.0.6",
     "faker": "^4.1.0",
     "moment": "^2.26.0",
+    "newrelic": "^6.8.0",
+    "path": "^0.12.7",
     "pg": "^8.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
