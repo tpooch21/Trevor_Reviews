@@ -61,7 +61,7 @@
 ```
 
 ### Update review
-  * PATCH `api/:place_id/review/:review_id`
+  * PATCH `api/:place_id/review/:date/:review_id`
 
 **Path Parameters**
   * `place_id` place id
@@ -87,7 +87,7 @@
 ```
 
 ### Delete review
-  * DELETE `api/:place_id/review/:review_id`
+  * DELETE `api/:place_id/review/:date/:review_id`
 
 **Path Parameters**
   * `place_id` place id

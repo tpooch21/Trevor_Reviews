@@ -18,7 +18,7 @@ app.get('/api/place/:id/reviews', controllers.getAllReviews);
 
 app.post('/api/place/:id/review', controllers.postReview);
 
-// app.patch('/api/:place_id/review/:review_id')
+app.patch('/api/:place_id/review/:date/:review_id', controllers.updateReview);
 
 // app.delete('/api/:place_id/review/:review_id')
 
