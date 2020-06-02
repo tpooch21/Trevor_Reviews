@@ -8,7 +8,6 @@ USE bnbreviews;
 -- Find place by id
 CREATE TABLE bnbreviews.places (
   place_id bigint,
-  place_name text,
   PRIMARY KEY (place_id)
 );
 
@@ -20,24 +19,6 @@ CREATE TABLE bnbreviews.users (
   avatar text,
   PRIMARY KEY(user_id)
 );
-
-CREATE TABLE bnbreviews.reviews_by_user (
-  review_id bigint,
-  date_published date,
-  comment text,
-  checkin_rating decimal,
-  accuracy_rating decimal,
-  value_rating decimal,
-  communication_rating decimal,
-  cleanliness_rating decimal,
-  location_rating decimal,
-  user_id bigint,
-  place_id bigint,
-  first_name text,
-  last_name text,
-  avatar text,
-  PRIMARY KEY (user_id, date_published, review_id)
-) WITH CLUSTERING ORDER BY (date_published DESC);
 
 -- Find reviews by place id
 CREATE TABLE bnbreviews.reviews_by_place (
