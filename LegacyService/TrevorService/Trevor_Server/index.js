@@ -20,9 +20,9 @@ app.post('/api/place/:id/review', controllers.postReview);
 
 app.patch('/api/:place_id/review/:date/:review_id', controllers.updateReview);
 
-// app.delete('/api/:place_id/review/:review_id')
+app.delete('/api/:place_id/review/:date/:review_id', controllers.deleteReviewCont);
 
-// app.delete('api/place/:id')
+app.delete('/api/place/:id', controllers.deletePlace);
 
 app.listen(port, () => {console.log(`Server is listening at http://localhost:${port}`)});
 
