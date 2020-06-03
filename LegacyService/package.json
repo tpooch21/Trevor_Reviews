@@ -16,7 +16,7 @@
     "legacyseed": "psql -U postgres < schema.sql",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "trevorDataGen": "node --max-old-space-size=6144 TrevorService/Trevor_Database/seeder.js && node timeStamp.js",
+    "trevorDataGen": "node --max-old-space-size=4096 TrevorService/Trevor_Database/seeder.js && node timeStamp.js",
     "seedpg": "psql -U trevor -d bnbreviews < TrevorService/Trevor_Database/schema2.sql && bash seedingCommands.bash",
     "seedCass": "cqlsh -u root -p flamingo < TrevorService/Trevor_Database/reviews.cql && bash TrevorService/Trevor_Database/cassandraSeed.bash"
   },
